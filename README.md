@@ -4,7 +4,8 @@
 
 该项目是一个基于Vue.js和Ethereum的银行合约交互Demo。用户可以通过MetaMask连接到以太坊网络，查看和管理银行合约中的代币余额， 运行时界面如下图所示。
 
-![Bank Web3 Demo](./public/bank_web3_demo.png)
+<div style="text-align:center"><img src="./public/bank_web3_demo.png" width="400px" alt="Bank Web3 Demo"></div>
+
 1. **钱包连接**
    - 通过MetaMask连接以太坊钱包
    - 显示当前账户地址和ETH余额
