@@ -1,8 +1,69 @@
+<div align="right">
+  <button onclick="toggleLanguage()">中文/English</button>
+</div>
+
+<div id="en">
+# Bank Contract Frontend Application
+
+## Features
+
+This is a Vue.js and Ethereum based bank contract interaction demo. Users can connect to the Ethereum network via MetaMask to view and manage token balances in the bank contract. The runtime interface is shown below.
+
+<div style="text-align:center"><img src="./public/bank_web3_demo.png" width="400px" alt="Bank Web3 Demo"></div>
+
+1. **Wallet Connection**
+   - Connect to Ethereum wallet via MetaMask
+   - Display current account address and ETH balance
+
+2. **Token Operations**
+   - Display token balance in bank contract
+   - Deposit: Deposit tokens to bank contract
+   - Withdraw: Withdraw tokens from bank contract
+   - Transfer: Transfer tokens to other accounts
+   - Approve: Authorize bank contract to operate tokens
+
+3. **Value Processing**
+   - Automatic handling of 18 decimal places (wei unit conversion)
+   - Balance display retains 8 decimal places
+
+## Smart Contract Details
+
+### Bank.sol
+- Function: Implements core banking logic including deposit, withdrawal, transfer and balance query
+- Dependency: Requires importing Token.sol as token contract
+- Main methods:
+  - deposit(uint256 amount): Deposit tokens
+  - withdraw(uint256 amount): Withdraw tokens
+  - transfer(address to, uint256 amount): Transfer tokens
+  - getBalance(): Query balance
+
+### Token.sol
+- Function: Implements ERC20 standard token contract
+- Features:
+  - Token name: BankDemoToken
+  - Token symbol: BDT
+  - Decimals: 18
+  - Initial supply: 10,000 BDT
+
+### Contract Dependencies
+- Bank.sol imports Token.sol
+- Bank contract requires Token contract address in constructor
+- All token operations are implemented through Token contract's transferFrom/transfer methods
+
+## Deployment
+- Contracts deployed via [Remix Ethereum IDE](https://remix.ethereum.org/)
+- Use flattened version for verification if needed
+- Contract ABIs saved in `/contracts` folder as `token.abi.json` and `bank.abi.json`
+</div>
+
+<div id="zh" style="display:none">
 # 银行合约前端应用
 
 ## 项目功能
 
-该项目是一个基于Vue.js和Ethereum的银行合约交互Demo。用户可以通过MetaMask连接到以太坊网络，查看和管理银行合约中的代币余额， 运行时界面如下图所示。
+## 项目功能
+
+该项目是一个基于Vue.js和Ethereum的银行合约交互Demo。用户可以通过MetaMask连接到以太坊网络，查看和管理银行合约中的代币余额，运行时界面如下图所示。
 
 <div style="text-align:center"><img src="./public/bank_web3_demo.png" width="400px" alt="Bank Web3 Demo"></div>
 
