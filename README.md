@@ -54,12 +54,34 @@ This is a Vue.js and Ethereum based bank contract interaction demo. Users can co
 - Contracts deployed via [Remix Ethereum IDE](https://remix.ethereum.org/)
 - Use flattened version for verification if needed
 - Contract ABIs saved in `/contracts` folder as `token.abi.json` and `bank.abi.json`
+- Contract addresses stored in `.env` as BANK_CONTRACT_ADDRESS and VUE_APP_TOKEN_CONTRACT_ADDRESS
+
+## Project Operations
+
+### Environment Setup
+1. Install Node.js (recommended v16+)
+2. Install MetaMask browser extension
+3. Configure MetaMask to connect to the correct network
+
+### Install Dependencies
+```bash
+cd bank_web
+npm install
+```
+
+### Run in Development Mode
+```bash
+npm run dev
+```
+
+### View in Browser
+Open in browser (e.g. http://localhost:5173/). If MetaMask is not connected, it will prompt to connect MetaMask.
 </div>
+
+
 
 <div id="zh" style="display:none">
 # 银行合约前端应用
-
-## 项目功能
 
 ## 项目功能
 
